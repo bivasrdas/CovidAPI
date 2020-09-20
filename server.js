@@ -19,6 +19,6 @@ app.post("/chat", (req, res) => {
 });
 
 //app.set("port", 4000);
-const server = app.listen(app.get("port"), () => {
+const server = app.listen(port, () => {
   console.log(`Express running → PORT ${port}`);
 });
