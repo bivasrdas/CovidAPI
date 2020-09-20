@@ -1,6 +1,7 @@
 require("dotenv").config({ path: "variables.env" });
 
 const express = require("express");
+let port =process.env.PORT || 4000;
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const processMessage = require("./process-message");
@@ -17,7 +18,7 @@ app.post("/chat", (req, res) => {
   });
 });
 
-app.set("port", 4000);
+//app.set("port", 4000);
 const server = app.listen(app.get("port"), () => {
   console.log(`Express running → PORT ${server.address().port}`);
 });
